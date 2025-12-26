@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Git Basics – Beginner Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #24292e;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #24292e;
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+
+    p {
+      color: #333;
+    }
+
+    .box {
+      background: #f6f8fa;
+      border-left: 5px solid #0366d6;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+
+    code {
+      background: #eaeef2;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+    }
+
+    pre {
+      background: #0d1117;
+      color: #c9d1d9;
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Git Basics – Beginner Friendly Guide</h1>
+  <p>Learn Git from scratch and push your first code 🚀</p>
+</header>
+
+<main>
+
+  <h2>📌 What is Git?</h2>
+  <p>
+    Git is a <strong>version control system</strong> that helps you track changes
+    in your code and work safely with teams.
+  </p>
+
+  <div class="box">
+    Git remembers <strong>who changed what</strong>, <strong>when</strong>, and lets you
+    <strong>go back in time</strong>.
+  </div>
+
+  <h2>🔄 Git Workflow</h2>
+  <pre>
+Working Directory → Staging Area → Repository
+  </pre>
+
+  <ul>
+    <li><strong>Working Directory</strong> – Your files</li>
+    <li><strong>Staging Area</strong> – Files ready to save</li>
+    <li><strong>Repository</strong> – Saved history (commits)</li>
+  </ul>
+
+  <h2>⚙️ Basic Git Setup (One Time)</h2>
+  <pre>
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+  </pre>
+
+  <h2>📁 Create Your First Git Project</h2>
+  <pre>
+mkdir my-first-project
+cd my-first-project
+git init
+  </pre>
+
+  <h2>➕ Add Files & Commit</h2>
+  <pre>
+git status
+git add .
+git commit -m "Initial commit"
+  </pre>
+
+  <h2>🌐 Push Code to Remote Repository</h2>
+  <pre>
+git remote add origin https://your-repo-url.git
+git branch -M main
+git push -u origin main
+  </pre>
+
+  <h2>🌿 Branching Basics</h2>
+  <pre>
+git checkout -b feature/login
+git checkout main
+  </pre>
+
+  <div class="box">
+    Always create a <strong>feature branch</strong>.
+    Never work directly on <code>main</code> or environment branches.
+  </div>
+
+  <h2>📌 Common Daily Commands</h2>
+  <ul>
+    <li><code>git status</code> – Check changes</li>
+    <li><code>git pull</code> – Get latest code</li>
+    <li><code>git push</code> – Upload your commits</li>
+    <li><code>git log</code> – View history</li>
+  </ul>
+
+  <h2>✅ Best Practices</h2>
+  <ul>
+    <li>Commit small and often</li>
+    <li>Write meaningful commit messages</li>
+    <li>Pull before push</li>
+    <li>Use Pull Requests</li>
+    <li>Never force push to shared branches</li>
+  </ul>
+
+</main>
+
+<footer>
+  Git Basics Guide • Simple • Clean • Beginner Friendly
+</footer>
+
+</body>
+</html>
