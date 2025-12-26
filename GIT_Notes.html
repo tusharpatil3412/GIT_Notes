@@ -64,8 +64,25 @@
       margin: 15px 0;
     }
 
-    ul {
-      margin-left: 20px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table th, table td {
+      border: 1px solid #d0d7de;
+      padding: 10px;
+      text-align: left;
+    }
+
+    table th {
+      background: #f6f8fa;
+      font-weight: bold;
+    }
+
+    table tr:nth-child(even) {
+      background: #f9fbfc;
     }
 
     footer {
@@ -101,23 +118,10 @@
 Working Directory → Staging Area → Repository
   </pre>
 
-  <ul>
-    <li><strong>Working Directory</strong> – Your files</li>
-    <li><strong>Staging Area</strong> – Files ready to save</li>
-    <li><strong>Repository</strong> – Saved history (commits)</li>
-  </ul>
-
   <h2>⚙️ Basic Git Setup (One Time)</h2>
   <pre>
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
-  </pre>
-
-  <h2>📁 Create Your First Git Project</h2>
-  <pre>
-mkdir my-first-project
-cd my-first-project
-git init
   </pre>
 
   <h2>➕ Add Files & Commit</h2>
@@ -145,14 +149,6 @@ git checkout main
     Never work directly on <code>main</code> or environment branches.
   </div>
 
-  <h2>📌 Common Daily Commands</h2>
-  <ul>
-    <li><code>git status</code> – Check changes</li>
-    <li><code>git pull</code> – Get latest code</li>
-    <li><code>git push</code> – Upload your commits</li>
-    <li><code>git log</code> – View history</li>
-  </ul>
-
   <h2>✅ Best Practices</h2>
   <ul>
     <li>Commit small and often</li>
@@ -161,6 +157,76 @@ git checkout main
     <li>Use Pull Requests</li>
     <li>Never force push to shared branches</li>
   </ul>
+
+  <!-- NEW TABLE SECTION -->
+  <h2>📋 Useful Git Commands (Quick Reference)</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Command</th>
+        <th>Description</th>
+        <th>When to Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>git status</code></td>
+        <td>Check file and branch status</td>
+        <td>Before every commit</td>
+      </tr>
+      <tr>
+        <td><code>git add .</code></td>
+        <td>Stage all changes</td>
+        <td>Before committing</td>
+      </tr>
+      <tr>
+        <td><code>git commit -m "msg"</code></td>
+        <td>Save changes</td>
+        <td>After staging files</td>
+      </tr>
+      <tr>
+        <td><code>git pull</code></td>
+        <td>Fetch and merge latest code</td>
+        <td>Before starting work</td>
+      </tr>
+      <tr>
+        <td><code>git push</code></td>
+        <td>Upload commits to remote</td>
+        <td>After commit</td>
+      </tr>
+      <tr>
+        <td><code>git checkout -b branch</code></td>
+        <td>Create and switch branch</td>
+        <td>New feature or bugfix</td>
+      </tr>
+      <tr>
+        <td><code>git checkout branch</code></td>
+        <td>Switch branch</td>
+        <td>Change working branch</td>
+      </tr>
+      <tr>
+        <td><code>git branch</code></td>
+        <td>List branches</td>
+        <td>View available branches</td>
+      </tr>
+      <tr>
+        <td><code>git log</code></td>
+        <td>View commit history</td>
+        <td>Debug or review history</td>
+      </tr>
+      <tr>
+        <td><code>git merge branch</code></td>
+        <td>Merge branch into current</td>
+        <td>After PR approval</td>
+      </tr>
+      <tr>
+        <td><code>git reset --hard HEAD</code></td>
+        <td>Discard local changes</td>
+        <td>When things go wrong ⚠️</td>
+      </tr>
+    </tbody>
+  </table>
 
 </main>
 
