@@ -138,6 +138,32 @@ git branch -M main
 git push -u origin main
   </pre>
 
+  <h2>⬇️ Git Fetch</h2>
+  <p>
+    <code>git fetch</code> downloads changes from a remote repository into your local repo
+    <strong>without merging</strong> them into your working branch. It lets you see what others
+    have pushed before deciding to integrate those changes.
+  </p>
+
+  <div class="box">
+    <strong>git fetch vs git pull</strong><br />
+    <code>git fetch</code> only downloads remote changes — your working directory stays untouched.<br />
+    <code>git pull</code> fetches <em>and</em> immediately merges those changes into your current branch.
+    Use <code>git fetch</code> when you want to inspect changes before merging.
+  </div>
+
+  <p><strong>Usage Examples:</strong></p>
+  <pre>
+# 1. Fetch all remotes (updates all remote-tracking branches)
+git fetch
+
+# 2. Fetch from a specific remote
+git fetch origin
+
+# 3. Fetch a specific branch from a specific remote
+git fetch origin main
+  </pre>
+
   <h2>🌿 Branching Basics</h2>
   <pre>
 git checkout -b feature/login
@@ -184,6 +210,11 @@ git checkout main
         <td><code>git commit -m "msg"</code></td>
         <td>Save changes</td>
         <td>After staging files</td>
+      </tr>
+      <tr>
+        <td><code>git fetch</code></td>
+        <td>Download remote changes without merging</td>
+        <td>To inspect remote changes safely</td>
       </tr>
       <tr>
         <td><code>git pull</code></td>
