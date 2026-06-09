@@ -131,6 +131,42 @@ git add .
 git commit -m "Initial commit"
   </pre>
 
+  <h2>⬇️ git fetch – Download Without Merging</h2>
+  <p>
+    <code>git fetch</code> downloads changes from the remote repository into your local
+    repository, but <strong>does not automatically merge</strong> them into your working branch.
+    This lets you inspect what has changed before deciding to integrate it.
+  </p>
+
+  <div class="box">
+    <strong>git fetch vs git pull:</strong><br />
+    <code>git pull</code> = <code>git fetch</code> + <code>git merge</code>.<br />
+    Use <code>git fetch</code> when you want to <strong>review changes first</strong> before merging.
+  </div>
+
+  <pre>
+# Fetch all remotes
+git fetch
+
+# Fetch from a specific remote
+git fetch origin
+
+# Fetch a specific branch from a remote
+git fetch origin main
+  </pre>
+
+  <p>
+    After fetching, you can inspect the incoming changes before merging:
+  </p>
+
+  <pre>
+# See what changed on the remote main branch vs your local main
+git diff main origin/main
+
+# Then merge when ready
+git merge origin/main
+  </pre>
+
   <h2>🌐 Push Code to Remote Repository</h2>
   <pre>
 git remote add origin https://your-repo-url.git
